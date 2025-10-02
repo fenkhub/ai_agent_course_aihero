@@ -1,0 +1,518 @@
+## Project Changelogs
+
+The changelog document contains records of all the notable changes made to the project, including updates, bug fixes, and new features.
+
+---
+
+## Release Notes for Version 1.9.x Series
+
+The 1.9.x series focuses on expanding web data collection capabilities and improving authentication mechanisms. Key highlights include the addition of 23 new web data tools.
+
+### Changed
+
+- Updated browser authentication to use API_TOKEN instead of previous authentication method
+- BROWSER_ZONE is now an optional parameter, the default zone is `mcp_browser`
+- Removed duplicate web_data_ tools
+- Updated coding conventions and file formatting
+- Enhanced web data API endpoints integration
+
+### Fixed
+
+- Fixed spelling errors and improved coding conventions
+- Converted files back to Unix line endings for consistency
+
+---
+
+## Release Notes for Version 1.8.x Series
+
+The 1.8.x series introduced significant improvements to browser session management, WSAPI endpoints, and overall system reliability. Notable features include domain-based sessions and automatic zone creation.
+
+### Changed
+
+- Bumped FastMCP version for improved performance
+- Updated README.md with additional documentation
+- Applied dos2unix formatting for consistency
+- Updated Docker configuration
+- Updated smithery.yaml configuration
+
+### Added
+
+- Added Bright Data MCP with Claude demo video to README.md
+- Added automatic creation of required unlocker zone when not present
+- Added 12 new WSAPI endpoints for enhanced functionality
+- Changed to polling mechanism for better reliability
+- Added domain-based browser sessions to avoid navigation limit issues
+
+### Fixed
+
+- Fixed GitHub references and repository settings
+- Fixed browser context maintenance across tool calls with current domain tracking
+- Minor lint fixes
+
+---
+
+## Release Notes for Version 1.0.0
+
+Initial stable release providing core MCP server functionality for Bright Data integration with comprehensive browser automation and web scraping capabilities.
+
+### Added
+
+- Initial release of Bright Data MCP server
+- Browser automation capabilities with Bright Data integration
+- Core web scraping and data collection tools
+- Smithery.yaml configuration for deployment in Smithery.ai
+- MIT License
+- Demo materials and documentation
+- Created comprehensive README.md
+- Added demo.md with usage examples
+- Created examples/README.md for sample implementations
+- Added Tools.md documentation for available tools
+
+---
+
+Here are the sections for the provided document:
+
+## Introduction
+
+The Web MCP is a tool that provides your AI with real-time web capabilities. It allows you to give your AI true web capabilities, with no more outdated responses or "I can't access real-time information" messages.
+
+### Key Features
+
+* Works with any LLM (Claude, GPT, Gemini, Llama)
+* Ensures your AI never gets blocked, rate-limited, or served CAPTCHAs
+* Provides 5,000 free requests per month
+
+### Benefits
+
+* Perfect for real-time research, e-commerce intelligence, market analysis, AI agents, content creation, and academic research
+
+---
+
+## Quick Start
+
+### Use Our Hosted Server
+
+Use our hosted server with no installation needed! Just add this URL to your MCP client:
+
+```
+https://mcp.brightdata.com/mcp?token=YOUR_API_TOKEN_HERE
+```
+
+### Run Locally on Your Machine
+
+```json
+{
+  "mcpServers": {
+    "Bright Data": {
+      "command": "npx",
+      "args": ["@brightdata/mcp"],
+      "env": {
+        "API_TOKEN": "<your-api-token-here>"
+      }
+    }
+  }
+}
+```
+
+---
+
+## Pricing & Modes
+
+### Pricing
+
+* Rapid Mode (Free): $0/month for 5,000 requests
+* Pro Mode: Pay-as-you-go for every tool and feature
+
+### Modes
+
+| Mode | Description | Tools Included |
+|
+
+---
+
+|
+
+---
+
+-|
+
+---
+
+-|
+| Rapid Mode | Default mode for free tier users | 🔍 `search_engine`, 📄 `scrape_as_markdown` |
+| Pro Mode | Advanced tools for paid users | Browser control, web data APIs, e-commerce tools, and more |
+
+---
+
+## Features
+
+### Core Capabilities
+
+| Feature | Description |
+|
+
+---
+
+|
+
+---
+
+-|
+| 🔍 Smart Web Search | Google-quality results optimized for AI |
+| 📄 Clean Markdown | AI-ready content extraction |
+| 🌍 Global Access | Bypass geo-restrictions automatically |
+| 🛡️ Anti-Bot Protection | Never get blocked or rate-limited |
+
+### Browser Automation
+
+| Feature | Description |
+|
+
+---
+
+|
+
+---
+
+-|
+| 🤖 Browser Automation | Control real browsers remotely (Pro mode only) |
+
+### Lightning Fast
+
+| Feature | Description |
+|
+
+---
+
+|
+
+---
+
+-|
+| ⚡ Lightning Fast | Optimized for minimal latency |
+
+---
+
+## Demos
+
+* Watch demos on earlier versions: https://github.com/user-attachments/assets/59f6ebba-801a-49ab-8278-1b2120912e33
+* View more tutorials on YouTube: https://github.com/brightdata-com/brightdata-mcp/blob/main/examples/README.md
+
+---
+
+## Available Tools
+
+### Rapid Mode Tools (Default - Free)
+
+| Tool | Description | Use Case |
+|
+
+---
+
+|
+
+---
+
+-|
+
+---
+
+-|
+| 🔍 `search_engine` | Web search with AI-optimized results | Research, fact-checking, current events |
+| 📄 `scrape_as_markdown` | Convert any webpage to clean markdown | Content extraction, documentation |
+
+### Pro Mode Tools (60+ Tools)
+
+| Category | Tools | Description |
+|
+
+---
+
+-|
+
+---
+
+-|
+
+---
+
+-|
+| Browser Control | `scraping_browser.*` | Full browser automation |
+| Web Data APIs | `web_data_*` | Structured data extraction |
+| E-commerce | Product scrapers | Amazon, eBay, Walmart data |
+| Social Media | Social scrapers | Twitter, LinkedIn, Instagram |
+| Maps & Local | Location tools | Google Maps, business data |
+
+---
+
+## Try It Now!
+
+### Online Playground
+
+Try the Web MCP without any setup:
+
+<div align="center">
+  <a href="https://brightdata.com/ai/playground-chat">
+    <img src="https://img.shields.io/badge/Try_on-Playground-00C7B7?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJMMyA3VjE3TDEyIDIyTDIxIDE3VjdMMTIgMloiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4=" alt="Playground"/>
+  </a>
+</div>
+
+---
+
+## Configuration
+
+### Basic Setup
+
+```json
+{
+  "mcpServers": {
+    "Bright Data": {
+      "command": "npx",
+      "args": ["@brightdata/mcp"],
+      "env": {
+        "API_TOKEN": "your-token-here"
+      }
+    }
+  }
+}
+```
+
+### Advanced Configuration
+
+```json
+{
+  "mcpServers": {
+    "Bright Data": {
+      "command": "npx",
+      "args": ["@brightdata/mcp"],
+      "env": {
+        "API_TOKEN": "your-token-here",
+        "PRO_MODE": "true",              // Enable all 60+ tools
+        "RATE_LIMIT": "100/1h",          // Custom rate limiting
+        "WEB_UNLOCKER_ZONE": "custom",   // Custom unlocker zone
+        "BROWSER_ZONE": "custom_browser" // Custom browser zone
+      }
+    }
+  }
+}
+```
+
+---
+
+## Documentation
+
+* View the API documentation: https://docs.brightdata.com/mcp-server/overview
+* View the example queries: https://github.com/brightdata-com/brightdata-mcp/blob/main/examples/README.md
+
+---
+
+## Common Issues & Solutions
+
+* View the troubleshooting guide: https://github.com/brightdata-com/brightdata-mcp#troubleshooting
+
+---
+
+## Contributing
+
+* Report bugs: https://github.com/brightdata-com/brightdata-mcp/issues
+* Suggest features: https://github.com/brightdata-com/brightdata-mcp/issues
+* Submit PRs: https://github.com/brightdata-com/brightdata-mcp/pulls
+
+---
+
+## Support
+
+* View the GitHub issues: https://github.com/brightdata-com/brightdata-mcp/issues
+* View the documentation: https://docs.brightdata.com/mcp-server/overview
+* Email support: support@brightdata.com
+
+---
+
+## License
+
+MIT Copyright (c) 2023 Bright Data Ltd.
+
+---
+
+## Web Scraping and Data Extraction
+
+The available features for web scraping and data extraction are:
+
+- **Search Engine**: Scrape search results from Google, Bing, or Yandex.
+- **Scrape as Markdown**: Scrape a single webpage URL with advanced options for content extraction and get back the results in MarkDown language.
+- **Scrape as HTML**: Scrape a single webpage URL with advanced options for content extraction and get back the results in HTML.
+- **Scraping Browser Navigate**: Navigate a scraping browser session to a new URL.
+- **Scraping Browser Go Back**: Go back to the previous page.
+- **Scraping Browser Go Forward**: Go forward to the next page.
+- **Scraping Browser Click**: Click on an element.
+- **Scraping Browser Links**: Get all links on the current page, text, and selectors.
+- **Scraping Browser Type**: Type text into an element.
+- **Scraping Browser Wait for**: Wait for an element to be visible on the page.
+- **Scraping Browser Screenshot**: Take a screenshot of the current page.
+- **Scraping Browser Get HTML**: Get the HTML content of the current page.
+- **Scraping Browser Get Text**: Get the text content of the current page.
+
+---
+
+## Data Extraction from Amazon
+
+The following features are available for extracting data from Amazon:
+
+- **Web Data Amazon Product**: Quickly read structured Amazon product data.
+- **Web Data Amazon Product Reviews**: Quickly read structured Amazon product review data.
+- **Web Data Amazon Product Search**: Quickly read structured Amazon product search data.
+
+---
+
+## Data Extraction from Other E-commerce Platforms
+
+The following features are available for extracting data from other e-commerce platforms:
+
+- **Web Data Walmart Product**: Quickly read structured Walmart product data.
+- **Web Data Walmart Seller**: Quickly read structured Walmart seller data.
+- **Web Data Ebay Product**: Quickly read structured eBay product data.
+- **Web Data Homedepot Products**: Quickly read structured Home Depot product data.
+- **Web Data Zara Products**: Quickly read structured Zara product data.
+- **Web Data Etsy Products**: Quickly read structured Etsy product data.
+- **Web Data Bestbuy Products**: Quickly read structured Best Buy product data.
+
+---
+
+## Social Media Data Extraction
+
+The following features are available for extracting data from social media platforms:
+
+- **Web Data LinkedIn People Profile**: Quickly read structured LinkedIn people profile data.
+- **Web Data LinkedIn Company Profile**: Quickly read structured LinkedIn company profile data.
+- **Web Data LinkedIn Job Listings**: Quickly read structured LinkedIn job listings data.
+- **Web Data LinkedIn Posts**: Quickly read structured LinkedIn posts data.
+- **Web Data LinkedIn People Search**: Quickly read structured LinkedIn people search data.
+- **Web Data Instagram Profiles**: Quickly read structured Instagram profile data.
+- **Web Data Instagram Posts**: Quickly read structured Instagram post data.
+- **Web Data Instagram Reels**: Quickly read structured Instagram reel data.
+- **Web Data Instagram Comments**: Quickly read structured Instagram comments data.
+- **Web Data Facebook Posts**: Quickly read structured Facebook post data.
+- **Web Data Facebook Marketplace Listings**: Quickly read structured Facebook marketplace listing data.
+- **Web Data Facebook Company Reviews**: Quickly read structured Facebook company reviews data.
+- **Web Data Tiktok Profiles**: Quickly read structured TikTok profiles data.
+- **Web Data Tiktok Posts**: Quickly read structured TikTok post data.
+- **Web Data Tiktok Shop**: Quickly read structured TikTok shop data.
+- **Web Data Tiktok Comments**: Quickly read structured TikTok comments data.
+
+---
+
+## Data Extraction from Online Directories
+
+The following features are available for extracting data from online directories:
+
+- **Web Data Zoominfo Company Profile**: Quickly read structured ZoomInfo company profile data.
+- **Web Data Crunchbase Company**: Quickly read structured Crunchbase company data.
+- **Web Data Google Maps Reviews**: Quickly read structured Google Maps reviews data.
+
+---
+
+## Data Extraction from Online Marketplaces
+
+The following features are available for extracting data from online marketplaces:
+
+- **Web Data Etsy Products**: Quickly read structured Etsy product data.
+- **Web Data eBay Product**: Quickly read structured eBay product data.
+- **Web Data Walmart Product**: Quickly read structured Walmart product data.
+
+---
+
+## Data Extraction from Online Shopping Platforms
+
+The following features are available for extracting data from online shopping platforms:
+
+- **Web Data Google Shopping**: Quickly read structured Google Shopping data.
+- **Web Data Google Play Store**: Quickly read structured Google Play Store data.
+- **Web Data Apple App Store**: Quickly read structured Apple App Store data.
+
+---
+
+## Data Extraction from News and Finance
+
+The following features are available for extracting data from news and finance:
+
+- **Web Data Reuter News**: Quickly read structured Reuter news data.
+- **Web Data Yahoo Finance Business**: Quickly read structured Yahoo Finance business data.
+
+---
+
+## Data Extraction from Other Platforms
+
+The following features are available for extracting data from other platforms:
+
+- **Web Data Youtube Videos**: Quickly read structured YouTube videos data.
+- **Web Data Youtube Profiles**: Quickly read structured YouTube profiles data.
+- **Web Data Youtube Comments**: Quickly read structured YouTube comments data.
+- **Web Data Reddit Posts**: Quickly read structured Reddit posts data.
+
+---
+
+## Introduction to MCP Usage Examples
+
+A curated list of community demos using Bright Data's MCP server. This document showcases practical examples of how the MCP server can be utilized to create innovative applications and workflows.
+
+---
+
+## 🧠 Notable Examples
+
+- **AI voice agent that closed 4 deals & made $596 overnight 🤑**  
+  [📹 YouTube Demo](https://www.youtube.com/watch?v=YGzT3sVdwdY) 
+  [💻 GitHub Repo](https://github.com/llSourcell/my_ai_intern)
+
+- **Langgraph with mcp-adapters demo**
+
+  [📹 YouTube Demo](https://www.youtube.com/watch?v=6DXuadyaJ4g)
+  
+  [💻 Source Code](https://github.com/techwithtim/BrightDataMCPServerAgent)
+
+- **Researcher Agent built with Google ADK that is connected to Bright Data's MCP to fetch real-time data**
+
+   [📹 YouTube Demo](https://www.youtube.com/watch?v=r7WG6dXWdUI)
+  
+  [💻Source Code](https://github.com/MeirKaD/MCP_ADK)
+
+---
+
+## Efficient MCP Usage
+
+- **Replacing 3 MCP servers with our MCP server to avoid getting blocked 🤯**  
+  [📹 YouTube Demo](https://www.youtube.com/watch?v=0xmE0OJrNmg)
+
+---
+
+## Advanced Scrape and AI Use Cases
+
+- **Scrape ANY Website In Realtime With This Powerful AI MCP Server**
+
+   [📹 YouTube Demo](https://www.youtube.com/watch?v=bL5JIeGL3J0)
+
+---
+
+## Multi-Agent Job and Task Automation
+
+- **Multi-Agent job finder using Bright Data MCP and TypeScript from SCRATCH**
+
+   [📹 YouTube Demo](https://www.youtube.com/watch?v=45OtteCGFiI)
+   
+   [💻Source Code](https://github.com/bitswired/jobwizard)
+
+---
+
+## Tutorials and CLI Demos
+
+- **Usage example with Gemini CLI**
+
+    [📹 YouTube Tutorial](https://www.youtube.com/watch?v=FE1LChbgFEw)
+
+---
+
+## Contributing Examples
+
+Got a cool example? Open a PR or contact us!
+
+---
+

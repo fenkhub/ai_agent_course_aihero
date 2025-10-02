@@ -5,8 +5,10 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "groq>=0.32.0",
     "python-frontmatter",
     "requests",
+    "tqdm",
 ]
 
 [dependency-groups]
