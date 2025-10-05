@@ -1,0 +1,13 @@
+[project]
+name = "hanyalatihan"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "gradio>=5.48.0",
+    "groq>=0.32.0",
+    "langchain>=0.3.27",
+    "markdown>=3.9",
+    "openai>=2.1.0",
+]
